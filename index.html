@@ -89,6 +89,16 @@
     overflow-wrap:break-word;min-width:0;
   }
   ul.clean li > *{min-width:0}
+
+  /* ---- Source list (stacked cards) ---- */
+  .sources{display:grid;gap:10px;margin-top:14px}
+  .source{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:13px 15px}
+  .source b{display:block;font-weight:700;font-size:.95rem;margin-bottom:4px}
+  .source p{color:var(--muted);font-size:.9rem;line-height:1.5}
+  .source .links{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px 18px}
+  .source .links a{font-size:.9rem}
+  .khan-link{color:var(--accent-2);text-decoration:none;font-weight:600}
+  .khan-link:hover{text-decoration:underline}
   ul.clean li::before{content:"›";color:var(--accent);font-weight:800;font-size:1.1rem;line-height:1.3}
   .pill{font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 8px;margin-left:auto;align-self:center;white-space:nowrap}
   .pill.req{color:var(--accent-2);border-color:rgba(52,211,166,.4)}
@@ -157,8 +167,8 @@
 <header>
   <div class="wrap">
     <div class="eyebrow">Investor Relations · Summer 2026</div>
-    <h1>Your IR Internship Study Plan</h1>
-    <p class="sub">Everything you need in one place — the schedule, what you're building, and your required listening.</p>
+    <h1>Your IR Internship Program</h1>
+    <p class="sub">Mission, schedule, and resources.</p>
     <div class="facts">
       <div class="fact"><b>Jun 22</b><span>Start</span></div>
       <div class="fact"><b>20 hrs</b><span>per week</span></div>
@@ -333,12 +343,25 @@
   <section>
     <h2><span class="dot"></span>Where to find everything</h2>
     <p class="lead">Always go to the primary source. The hierarchy, best to last resort:</p>
-    <ul class="clean">
-      <li><b style="font-weight:700">SEC EDGAR</b> — the company's own filings. The truth. 10-K (annual), 10-Q (quarterly), 8-K (events), DEF 14A (ownership), S-1 (the IPO story).</li>
-      <li><b style="font-weight:700">Company IR sites</b> — releases, decks, webcasts, guidance. <a class="link" href="https://investor.elfbeauty.com">investor.elfbeauty.com</a> · <a class="link" href="https://investors.warbyparker.com">investors.warbyparker.com</a></li>
-      <li><b style="font-weight:700">Earnings call transcripts</b> — what management actually said, plus the Q&A where the real debate lives.</li>
-      <li><b style="font-weight:700">Sell-side research</b> — analysts' models and theses. Read critically — it's a view, not fact.</li>
-    </ul>
+    <div class="sources">
+      <div class="source">
+        <b>SEC EDGAR</b>
+        <p>The company's own filings — the truth. 10-K (annual), 10-Q (quarterly), 8-K (events), DEF 14A (ownership), S-1 (the IPO story).</p>
+      </div>
+      <div class="source">
+        <b>Company IR sites</b>
+        <p>Releases, decks, webcasts, guidance.</p>
+        <p class="links"><a class="link" href="https://investor.elfbeauty.com">investor.elfbeauty.com</a><a class="link" href="https://investors.warbyparker.com">investors.warbyparker.com</a></p>
+      </div>
+      <div class="source">
+        <b>Earnings call transcripts</b>
+        <p>What management actually said, plus the Q&amp;A where the real debate lives.</p>
+      </div>
+      <div class="source">
+        <b>Sell-side research</b>
+        <p>Analysts' models and theses. Read critically — it's a view, not fact.</p>
+      </div>
+    </div>
   </section>
 
   <!-- KHAN ACADEMY -->
@@ -346,10 +369,10 @@
     <h2><span class="dot"></span>Khan Academy</h2>
     <p class="lead">Finance & capital markets track. Two required units, two optional.</p>
     <ul class="clean">
-      <li>Unit 5 — Accounting & Financial Statements <span class="pill req">Required</span></li>
-      <li>Unit 6 — Stocks & Bonds <span class="pill req">Required</span></li>
-      <li>Unit 1 — Interest & Debt <span class="pill">Optional</span></li>
-      <li>Unit 3 — Inflation <span class="pill">Optional</span></li>
+      <li><a class="khan-link" href="https://www.khanacademy.org/economics-finance-domain/core-finance/accounting-and-financial-stateme">Unit 5 — Accounting &amp; Financial Statements</a> <span class="pill req">Required</span></li>
+      <li><a class="khan-link" href="https://www.khanacademy.org/economics-finance-domain/core-finance/stock-and-bonds">Unit 6 — Stocks &amp; Bonds</a> <span class="pill req">Required</span></li>
+      <li><a class="khan-link" href="https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial">Unit 1 — Interest &amp; Debt</a> <span class="pill">Optional</span></li>
+      <li><a class="khan-link" href="https://www.khanacademy.org/economics-finance-domain/core-finance/inflation-tutorial">Unit 3 — Inflation</a> <span class="pill">Optional</span></li>
     </ul>
   </section>
 
