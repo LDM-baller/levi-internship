@@ -96,6 +96,11 @@
   .name{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);border-radius:var(--radius);padding:18px}
   .name .ticker{font-size:1.4rem;font-weight:800;letter-spacing:-.02em}
   .name .co{color:var(--muted);font-size:.88rem;margin-top:2px}
+  .logos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+  .logo-tile{display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 18px;min-height:104px;transition:transform .08s ease,box-shadow .15s ease}
+  .logo-tile:hover{box-shadow:0 8px 24px rgba(0,0,0,.28)}
+  .logo-tile:active{transform:scale(.98)}
+  .logo-tile img{max-width:100%;max-height:54px;width:auto;height:auto;object-fit:contain;display:block}
 
   /* ---- Links / buttons ---- */
   a.link{color:var(--accent-2);text-decoration:none;border-bottom:1px solid rgba(52,211,166,.4)}
@@ -164,10 +169,14 @@
   <!-- THE MISSION -->
   <section>
     <h2><span class="dot"></span>The mission</h2>
-    <p class="lead">By the end of the summer you'll have done real fundamental analysis on two public companies — full models, valuation, ownership history, a trading framework — and pitched them to an investment committee.</p>
-    <div class="names">
-      <div class="name"><div class="ticker">ELF</div><div class="co">e.l.f. Beauty</div></div>
-      <div class="name"><div class="ticker">WRBY</div><div class="co">Warby Parker</div></div>
+    <p class="lead">Build a foundation in business analysis, financial accounting, and capital markets. During this program you'll perform real fundamental analysis on two public companies — including full models, valuation, and trading frameworks. Your program concludes with a stock pitch on one of these companies to an investment committee.</p>
+    <div class="logos">
+      <a class="logo-tile" href="https://investor.elfbeauty.com" aria-label="e.l.f. Beauty Investor Relations">
+        <img src="elf-logo.png" alt="e.l.f. Beauty">
+      </a>
+      <a class="logo-tile" href="https://investors.warbyparker.com" aria-label="Warby Parker Investor Relations">
+        <img src="warby-logo.svg" alt="Warby Parker">
+      </a>
     </div>
     <div class="callout"><b>One rule above all:</b> every number you use gets a source. All research is on public companies using public sources. If you can't source it, you can't use it.</div>
   </section>
@@ -180,17 +189,9 @@
 
       <div class="phase">
         <div class="card">
-          <div class="when">Jun 15 · before you start</div>
-          <h3>Orientation</h3>
-          <p>Tools set up, expectations, and your first reading. Get your accounts and workspace ready.</p>
-        </div>
-      </div>
-
-      <div class="phase">
-        <div class="card">
           <div class="when">Jun 22 →</div>
           <h3>Business & Markets Case Studies</h3>
-          <p>How businesses make money and how markets price them. Build the mental models before the math.</p>
+          <p>How businesses make money and how markets price them. Your required listening to build the mental models before getting into the math.</p>
         </div>
       </div>
 
