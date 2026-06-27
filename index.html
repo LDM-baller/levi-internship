@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Summer IR Internship — Study Plan</title>
+<meta name="description" content="A mobile-friendly study plan and required listening for the summer Investor Relations internship.">
+<style>
+  :root{
+    --bg:#0f1115;
+    --surface:#171a21;
+    --surface-2:#1f242e;
+    --line:#2a313d;
+    --text:#eef1f6;
+    --muted:#a3acbd;
+    --accent:#7c5cff;
+    --accent-2:#34d3a6;
+    --warn:#f5b14c;
+    --radius:16px;
+    --pad:clamp(16px,5vw,28px);
+    --maxw:680px;
+    font-synthesis:none;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;
+    padding:0 0 64px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+
+  /* ---- Header ---- */
+  header{
+    padding:calc(env(safe-area-inset-top) + 36px) 0 28px;
+    background:
+      radial-gradient(120% 140% at 80% -10%, rgba(124,92,255,.30), transparent 60%),
+      radial-gradient(120% 120% at 0% 0%, rgba(52,211,166,.18), transparent 55%),
+      var(--surface);
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent-2);font-weight:700;margin-bottom:10px;
+  }
+  h1{font-size:clamp(1.7rem,7vw,2.5rem);line-height:1.1;font-weight:800;letter-spacing:-.02em}
+  .sub{color:var(--muted);margin-top:12px;font-size:1.02rem;max-width:46ch}
+
+  /* ---- Quick facts ---- */
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}
+  .fact{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:12px 10px;text-align:center}
+  .fact b{display:block;font-size:1.05rem;font-weight:800}
+  .fact span{display:block;font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:3px}
+
+  /* ---- Section ---- */
+  section{margin-top:40px}
+  h2{font-size:1.25rem;font-weight:800;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+  h2 .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);flex:none}
+  .lead{color:var(--muted);margin-top:8px;font-size:.96rem}
+
+  /* ---- Timeline ---- */
+  .timeline{margin-top:18px;position:relative;padding-left:26px}
+  .timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .phase{position:relative;margin-bottom:16px}
+  .phase::before{
+    content:"";position:absolute;left:-23px;top:18px;width:12px;height:12px;border-radius:50%;
+    background:var(--bg);border:2px solid var(--accent);
+  }
+  .phase.cap::before{background:var(--accent);box-shadow:0 0 0 4px rgba(124,92,255,.2)}
+  .card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px 16px;
+  }
+  .card .when{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-2)}
+  .card h3{font-size:1.05rem;font-weight:700;margin:4px 0 4px}
+  .card p{color:var(--muted);font-size:.92rem}
+  .tag{display:inline-block;font-size:.7rem;font-weight:700;color:var(--warn);border:1px solid rgba(245,177,76,.35);background:rgba(245,177,76,.08);padding:2px 8px;border-radius:999px;margin-top:8px}
+
+  /* ---- Checklist / lists ---- */
+  ul.clean{list-style:none;margin-top:14px;display:grid;gap:8px}
+  ul.clean li{
+    background:var(--surface);border:1px solid var(--line);border-radius:12px;
+    padding:12px 14px;font-size:.95rem;display:flex;gap:10px;align-items:flex-start;
+  }
+  ul.clean li::before{content:"›";color:var(--accent);font-weight:800;font-size:1.1rem;line-height:1.3}
+  .pill{font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 8px;margin-left:auto;align-self:center;white-space:nowrap}
+  .pill.req{color:var(--accent-2);border-color:rgba(52,211,166,.4)}
+
+  /* ---- Two names ---- */
+  .names{display:grid;gap:12px;margin-top:16px}
+  @media(min-width:560px){.names{grid-template-columns:1fr 1fr}}
+  .name{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+  .name .ticker{font-size:1.4rem;font-weight:800;letter-spacing:-.02em}
+  .name .co{color:var(--muted);font-size:.88rem;margin-top:2px}
+
+  /* ---- Links / buttons ---- */
+  a.link{color:var(--accent-2);text-decoration:none;border-bottom:1px solid rgba(52,211,166,.4)}
+  .listen{display:grid;gap:10px;margin-top:16px}
+  .pod{
+    display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--text);
+    background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;
+    transition:border-color .15s ease, transform .05s ease;
+  }
+  .pod:active{transform:scale(.99)}
+  .pod:hover{border-color:var(--accent)}
+  .pod .ico{flex:none;width:42px;height:42px;border-radius:11px;background:rgba(124,92,255,.14);display:grid;place-items:center;font-size:1.2rem}
+  .pod .meta b{display:block;font-size:.98rem}
+  .pod .meta span{display:block;font-size:.8rem;color:var(--muted);margin-top:2px}
+  .pod .go{margin-left:auto;color:var(--muted);font-size:1.2rem}
+  .placeholder{
+    border:1px dashed var(--line);border-radius:14px;padding:20px;text-align:center;color:var(--muted);
+    font-size:.9rem;background:rgba(255,255,255,.02)
+  }
+
+  /* ---- Clean list rows + info popovers ---- */
+  .listen{list-style:none;margin-top:16px;display:grid;gap:10px;padding:0}
+  .pod-row{display:flex;align-items:stretch;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:border-color .15s ease}
+  .pod-row:hover{border-color:var(--accent)}
+  .pod-row:active{transform:scale(.995)}
+  .pod-link{flex:1 1 auto;display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--text);padding:14px 6px 14px 16px;min-width:0}
+  .pod-link .ico{flex:none;width:42px;height:42px;border-radius:11px;background:rgba(124,92,255,.14);display:grid;place-items:center;font-size:1.2rem}
+  .pod-link .meta{min-width:0}
+  .pod-link .meta b{display:block;font-size:.98rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pod-link .meta span{display:block;font-size:.8rem;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .info{flex:none;width:48px;align-self:stretch;border:none;border-left:1px solid var(--line);background:transparent;color:var(--muted);font-size:1.15rem;cursor:pointer;transition:color .15s,background .15s}
+  .info:hover{color:var(--accent-2);background:rgba(255,255,255,.03)}
+  .info-pop{max-width:min(420px,90vw);margin:auto;background:var(--surface-2);color:var(--text);border:1px solid var(--line);border-radius:16px;padding:22px 22px 18px}
+  .info-pop::backdrop{background:rgba(8,9,12,.6);backdrop-filter:blur(2px)}
+  .info-pop h4{font-size:1.05rem;font-weight:800;margin-bottom:4px}
+  .info-pop .src{font-size:.78rem;color:var(--accent-2);font-weight:700;letter-spacing:.04em;margin-bottom:10px}
+  .info-pop p{color:var(--muted);font-size:.93rem;line-height:1.6}
+  .info-pop .close{margin-top:16px;width:100%;padding:11px;border-radius:11px;border:1px solid var(--line);background:transparent;color:var(--text);font-weight:600;cursor:pointer}
+  .info-pop .close:hover{border-color:var(--accent)}
+  .bonus-label{margin:24px 0 -2px;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--warn);font-weight:700}
+
+  /* ---- Callout ---- */
+  .callout{background:rgba(52,211,166,.07);border:1px solid rgba(52,211,166,.25);border-radius:var(--radius);padding:16px 18px;margin-top:16px;font-size:.92rem}
+  .callout b{color:var(--accent-2)}
+
+  footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem;text-align:center}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Investor Relations · Summer 2026</div>
+    <h1>Your IR Internship Study Plan</h1>
+    <p class="sub">Everything you need in one place — the schedule, what you're building, and your required listening. Built for your phone.</p>
+    <div class="facts">
+      <div class="fact"><b>Jun 22</b><span>Start</span></div>
+      <div class="fact"><b>20 hrs</b><span>per week</span></div>
+      <div class="fact"><b>Aug 28</b><span>Pitch</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- THE MISSION -->
+  <section>
+    <h2><span class="dot"></span>The mission</h2>
+    <p class="lead">By the end of the summer you'll have done real fundamental analysis on two public companies — full models, valuation, ownership history, a trading framework — and pitched them to an investment committee.</p>
+    <div class="names">
+      <div class="name"><div class="ticker">ELF</div><div class="co">e.l.f. Beauty</div></div>
+      <div class="name"><div class="ticker">WRBY</div><div class="co">Warby Parker</div></div>
+    </div>
+    <div class="callout"><b>One rule above all:</b> every number you use gets a source. All research is on public companies using public sources. If you can't source it, you can't use it.</div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section>
+    <h2><span class="dot"></span>The schedule</h2>
+    <p class="lead">Six phases from orientation to the final pitch.</p>
+    <div class="timeline">
+
+      <div class="phase">
+        <div class="card">
+          <div class="when">Jun 15 · before you start</div>
+          <h3>Orientation</h3>
+          <p>Tools set up, expectations, and your first reading. Get your accounts and workspace ready.</p>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="card">
+          <div class="when">Jun 22 →</div>
+          <h3>Business & Markets Case Studies</h3>
+          <p>How businesses make money and how markets price them. Build the mental models before the math.</p>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="card">
+          <div class="when">Jul 22 – 31</div>
+          <h3>Financial Tools + Khan Academy</h3>
+          <p>Get fluent in the tools and the accounting. Complete the required Khan Academy units (below).</p>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="card">
+          <div class="when">Aug 3 →</div>
+          <h3>ELF — e.l.f. Beauty</h3>
+          <p>Your first full work-up: model, valuation, capital-markets history, and a thesis.</p>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="card">
+          <div class="when">Aug 10 →</div>
+          <h3>WRBY — Warby Parker</h3>
+          <p>Do it again, faster and sharper. Second name, same depth.</p>
+        </div>
+      </div>
+
+      <div class="phase cap">
+        <div class="card">
+          <div class="when">Aug 17 – 28 · capstone</div>
+          <h3>Stock Pitch</h3>
+          <p>Pull it together and pitch your names to the investment committee. This is what the whole summer builds toward.</p>
+          <span class="tag">★ Final deliverable</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KHAN ACADEMY -->
+  <section>
+    <h2><span class="dot"></span>Khan Academy</h2>
+    <p class="lead">Finance & capital markets track. Two required units, two optional.</p>
+    <ul class="clean">
+      <li>Unit 5 — Accounting & Financial Statements <span class="pill req">Required</span></li>
+      <li>Unit 6 — Stocks & Bonds <span class="pill req">Required</span></li>
+      <li>Unit 1 — Interest & Debt <span class="pill">Optional</span></li>
+      <li>Unit 3 — Inflation <span class="pill">Optional</span></li>
+    </ul>
+  </section>
+
+  <!-- WHERE TO FIND EVERYTHING -->
+  <section>
+    <h2><span class="dot"></span>Where to find everything</h2>
+    <p class="lead">Always go to the primary source. The hierarchy, best to last resort:</p>
+    <ul class="clean">
+      <li><b style="font-weight:700">SEC EDGAR</b> — the company's own filings. The truth. 10-K (annual), 10-Q (quarterly), 8-K (events), DEF 14A (ownership), S-1 (the IPO story).</li>
+      <li><b style="font-weight:700">Company IR sites</b> — releases, decks, webcasts, guidance. <a class="link" href="https://investor.elfbeauty.com">investor.elfbeauty.com</a> · <a class="link" href="https://investors.warbyparker.com">investors.warbyparker.com</a></li>
+      <li><b style="font-weight:700">Earnings call transcripts</b> — what management actually said, plus the Q&A where the real debate lives.</li>
+      <li><b style="font-weight:700">Sell-side research</b> — analysts' models and theses. Read critically — it's a view, not fact.</li>
+    </ul>
+  </section>
+
+  <!-- REQUIRED LISTENING -->
+  <section id="listening">
+    <h2><span class="dot"></span>Required listening</h2>
+    <p class="lead">Tap a row to open in Spotify. Tap the <strong style="color:var(--accent-2)">&#9432;</strong> to see why it made the list. Listen on the go — walking, commuting, the gym.</p>
+    <ul class="listen">
+
+      <li class="pod-row">
+        <a class="pod-link" href="https://lexfridman.com/magatte-wade/">
+          <span class="ico">🎧</span>
+          <span class="meta"><b>Magatte Wade</b><span>Lex Fridman #311</span></span>
+        </a>
+        <button class="info" popovertarget="i-magatte" aria-label="Why this episode">&#9432;</button>
+        <div id="i-magatte" popover class="info-pop">
+          <h4>Magatte Wade</h4>
+          <div class="src">Lex Fridman #311</div>
+          <p>Senegalese entrepreneur and consumer-brand founder Magatte Wade on how businesses actually get built — and why entrepreneurship, not aid, creates prosperity. A founder's-eye view of the real-world forces behind every company.</p>
+          <button class="close" popovertarget="i-magatte" popovertargetaction="hide">Close</button>
+        </div>
+      </li>
+
+      <li class="pod-row">
+        <a class="pod-link" href="https://open.spotify.com/episode/6oW9B8AmulnNGJtjagWlNx">
+          <span class="ico">🎧</span>
+          <span class="meta"><b>Gavin Baker — Watts and Wafers</b><span>Invest Like the Best #473</span></span>
+        </a>
+        <button class="info" popovertarget="i-baker" aria-label="Why this episode">&#9432;</button>
+        <div id="i-baker" popover class="info-pop">
+          <h4>Gavin Baker — Watts and Wafers</h4>
+          <div class="src">Invest Like the Best #473</div>
+          <p>Atreides founder &amp; CIO Gavin Baker on the constraints shaping AI. Listen for the method, not the topic: how a top investor finds the two or three variables that decide an outcome and separates signal from hype — the core skill of investing.</p>
+          <button class="close" popovertarget="i-baker" popovertargetaction="hide">Close</button>
+        </div>
+      </li>
+
+      <li class="pod-row">
+        <a class="pod-link" href="https://open.spotify.com/episode/7JgSpMvx3S9G9zgmZLLQHI">
+          <span class="ico">🎧</span>
+          <span class="meta"><b>Vanguard</b><span>Acquired</span></span>
+        </a>
+        <button class="info" popovertarget="i-vanguard" aria-label="Why this episode">&#9432;</button>
+        <div id="i-vanguard" popover class="info-pop">
+          <h4>Vanguard</h4>
+          <div class="src">Acquired</div>
+          <p>The story of Vanguard and Jack Bogle — how the index fund was born in 1975 and grew to own ~10% of the average S&amp;P 500 company. The origin story of how modern capital markets work: who owns stocks, why fees and structure matter, and the rise of passive investing.</p>
+          <button class="close" popovertarget="i-vanguard" popovertargetaction="hide">Close</button>
+        </div>
+      </li>
+
+      <li class="pod-row">
+        <a class="pod-link" href="https://open.spotify.com/episode/5WFwfl9N4L5oWZLL9JwMis">
+          <span class="ico">🎧</span>
+          <span class="meta"><b>Google Part II: Alphabet</b><span>Acquired</span></span>
+        </a>
+        <button class="info" popovertarget="i-google" aria-label="Why this episode">&#9432;</button>
+        <div id="i-google" popover class="info-pop">
+          <h4>Google Part II: Alphabet</h4>
+          <div class="src">Acquired</div>
+          <p>How Google became Alphabet — building Gmail, Maps, YouTube, Chrome, and Android while fighting Microsoft, Apple, and Facebook. A deep case study in how a great business expands, allocates capital, and compounds its advantages.</p>
+          <button class="close" popovertarget="i-google" popovertargetaction="hide">Close</button>
+        </div>
+      </li>
+
+      <li class="pod-row">
+        <a class="pod-link" href="https://www.youtube.com/watch?v=TgmfjvcA2Jc">
+          <span class="ico">🎧</span>
+          <span class="meta"><b>Marc Andreessen — Past, Present &amp; Future of AI</b><span>"YOUR WELCOME" #420</span></span>
+        </a>
+        <button class="info" popovertarget="i-andreessen" aria-label="Why this episode">&#9432;</button>
+        <div id="i-andreessen" popover class="info-pop">
+          <h4>Marc Andreessen — Past, Present &amp; Future of AI</h4>
+          <div class="src">"YOUR WELCOME" w/ Michael Malice #420</div>
+          <p>Netscape and a16z co-founder Marc Andreessen makes the techno-optimist case for AI. Listen the way you'd weigh any strong argument from an influential investor — take it in, then decide for yourself what holds up. (Conversational and at times political.)</p>
+          <button class="close" popovertarget="i-andreessen" popovertargetaction="hide">Close</button>
+        </div>
+      </li>
+
+      <p class="bonus-label">★ Bonus listening</p>
+
+      <li class="pod-row">
+        <a class="pod-link" href="https://open.spotify.com/episode/5PXOiMocxV2yEh0uSUDULq">
+          <span class="ico">🎧</span>
+          <span class="meta"><b>Vikings, Valhalla &amp; the Viking Age</b><span>Lex Fridman #495</span></span>
+        </a>
+        <button class="info" popovertarget="i-vikings" aria-label="Why this episode">&#9432;</button>
+        <div id="i-vikings" popover class="info-pop">
+          <h4>Vikings, Valhalla &amp; the Viking Age</h4>
+          <div class="src">Lex Fridman #495 · Lars Brownworth</div>
+          <p>Pure curiosity fuel — historian Lars Brownworth on the Vikings, Ragnar, berserkers, and Valhalla. Nothing to do with markets; everything to do with staying a genuinely curious person. The best analysts always are.</p>
+          <button class="close" popovertarget="i-vikings" popovertargetaction="hide">Close</button>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <footer>
+    Summer IR Internship · Study Plan · 2026 — public companies, public sources only.
+  </footer>
+
+</main>
+</body>
+</html>
